@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAEC college website">
+    <title>S A Engineering College</title>
+    <style>
+        :root {
+            --primary: #0d3b66;
+            --secondary: #f4b942;
+            --bg: #eef4fb;
+            --text: #1d1d1d;
+            --card: #ffffff;
+            --accent: #2b7a78;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, var(--bg), #dfe9f5);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #174c7d);
+            color: #fff;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            margin: 20px auto 10px;
+            color: var(--primary);
+            text-align: center;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 25px 20px;
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(13, 59, 102, 0.08);
+        }
+
+        main p {
+            font-size: 1.1rem;
+            margin: 12px 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 18px 20px 12px;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            background: var(--secondary);
+            color: #1b1b1b;
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(244, 185, 66, 0.25);
+        }
+
+        .nav-links a:hover {
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 15px 28px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="SAEC Logo" width="1500" height="200">
+    <header><h1>S. A. Enginering College</h1></header>
+    <h2>Department of CSE [AIML]</h2>
+    <main>
+        <p>Welcome to SAEC Campus!!!</p>
+        <p>Create your account to get started. <a href="register.html">Register</a></p>
+    </main>
+    <img src="saec.webp" alt="SAEC Campus" width="1510" height="800">
+    <nav class="nav-links">
+        <a href="about.html">About us</a>
+        <a href="mailto:miruthula122@gmail.com">Email</a>
+        <a href="tel:7010632732">Contact</a>
+        <a href="https://saec.ac.in/">SAEC</a>
+    </nav>
+    <footer>www.saec.in</footer>
+</body>
+</html>

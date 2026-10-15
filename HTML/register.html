@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAEC college website">
+    <title>Registration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #fff7ed, #eef6ff, #f3e8ff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 16px;
+        }
+
+        .container {
+            width: min(700px, 100%);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd6fe;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 18px 40px rgba(109, 40, 217, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4c1d95;
+            margin-bottom: 25px;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        label {
+            font-weight: 700;
+            color: #3730a3;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid #c4b5fd;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus {
+            outline: 3px solid rgba(168, 85, 247, 0.15);
+            border-color: #8b5cf6;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            accent-color: #8b5cf6;
+        }
+
+        .gender-row,
+        .terms-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .terms-row label {
+            color: crimson;
+            margin: 0;
+        }
+
+        button {
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 10px 24px rgba(124, 58, 237, 0.25);
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+        }
+
+        button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="/register" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <div class="gender-row">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="aiml">Artificial Intelligence and Machine Learning</option>
+            </select>
+
+            <div class="terms-row">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Agree to Terms & Conditions</label>
+            </div>
+
+            <button type="submit" disabled>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

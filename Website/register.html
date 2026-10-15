@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Clubs - Register</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="Images/icon.png" alt="Campus Clubs Logo" width="5%" height="5%">
+            <h2>Campus Clubs</h2>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="register.html" class="active">Join Us</a>
+        </nav>
+    </header>
+
+
+    <section>
+        <h1>Join Our Campus Clubs</h1>
+
+        <p>
+            Discover your interests, develop new skills and connect
+            with students who share your passion.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Student Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </p>
+
+                <p>
+                    <label for="studentid">Student ID:</label><br>
+                    <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" required>
+                </p>
+
+                <p>
+                    <label for="email">College Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                        placeholder="Enter 10-digit phone number" required>
+                </p>
+
+                <p>
+                    <label for="department">Department:</label><br>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="CSE">Computer Science Engineering</option>
+                        <option value="AIML">Artificial Intelligence and Machine Learning</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="ECE">Electronics and Communication Engineering</option>
+                        <option value="EEE">Electrical and Electronics Engineering</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                        <option value="CIVIL">Civil Engineering</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="year">Year of Study:</label><br>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Club Preferences</legend>
+
+                <p>
+                    <label for="club">Choose a Club:</label><br>
+                    <select id="club" name="club" required>
+                        <option value="">Select a Club</option>
+                        <option value="coding">Coding Club</option>
+                        <option value="robotics">Robotics Club</option>
+                        <option value="music">Music Club</option>
+                        <option value="dance">Dance Club</option>
+                        <option value="sports">Sports Club</option>
+                        <option value="arts">Arts and Crafts Club</option>
+                        <option value="photography">Photography Club</option>
+                        <option value="eco">Eco Club</option>
+                        <option value="community">Community Service Club</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="interest">Why do you want to join?</label><br>
+                    <textarea id="interest" name="interest" rows="5" cols="40"
+                        placeholder="Tell us about your interests and goals" required></textarea>
+                </p>
+
+                <p>
+                    Previous Experience:<br>
+
+                    <input type="radio" id="beginner" name="experience" value="beginner" required>
+                    <label for="beginner">Beginner</label><br>
+
+                    <input type="radio" id="intermediate" name="experience" value="intermediate">
+                    <label for="intermediate">Intermediate</label><br>
+
+                    <input type="radio" id="experienced" name="experience" value="experienced">
+                    <label for="experienced">Experienced</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <p>
+                <input type="checkbox" id="declaration" name="declaration" value="accepted" required>
+
+                <label for="declaration">
+                    I confirm that the information provided is correct
+                    and agree to follow the club rules.
+                </label>
+            </p>
+
+            <p>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Clear Form</button>
+            </p>
+
+        </form>
+    </section>
+
+
+    <section>
+        <h2>What Happens Next?</h2>
+
+        <ol>
+            <li>Submit the registration form.</li>
+            <li>The club coordinator reviews your application.</li>
+            <li>You receive membership confirmation.</li>
+            <li>Participate in club meetings and activities.</li>
+        </ol>
+
+        <p>
+            <a href="clubs.html">Explore Our Clubs</a> |
+            <a href="schedule.html">View Event Schedule</a>
+        </p>
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3><img src="Images/icon.png" alt="Campus Clubs Logo" width="5%" height="5%">Campus Clubs</h3>
+                <p>
+                    Bringing students together through shared
+                    interests, creativity and collaboration.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="register.html">Join Us</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: campusclubs@example.com</p>
+                <p>Follow us on social media</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Campus Clubs. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
