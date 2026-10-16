@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Move the pointer over the box and away.</p>
+    <div id="target" class="box">Move your pointer over me.<br>
+        <strong>Try moving over this text.</strong>
+    </div><p id="result" class="result">Waiting...</p>
+
+    <script>
+        const target=document.querySelector("#target")
+        const result=document.querySelector("#result")
+
+        //target.addEventListener("mouseover", ()=>{
+        //    target.style.backgroundColor = "#fed7aa"
+        //    result.textContent = "Mouseover fired"
+        //})
+
+        //target.addEventListener("mouseout", ()=>{
+        //    target.style.backgroundColor = "#dbeafe"
+        //    result.textContent = "Mouseout fired"
+        //})
+
+//MouseEnter and MouseLeave(same)
+        target.addEventListener("mouseenter", ()=>{
+            target.style.backgroundColor = "#fed7aa"
+            result.textContent = "Mouse Left"
+        })
+
+        target.addEventListener("mouseleave", ()=>{
+            target.style.backgroundColor = "#dbeafe"
+            result.textContent = "Mouse Entered"
+        })
+
+        target.addEventListener("contextmenu", (event)=>{
+            event.preventDefault()
+            target.style.backgroundColor = "#C2F774"
+            result.textContent = "Custom Right-Click Action!"
+        })
+
+
+    </script>
+</body>
+</html>
