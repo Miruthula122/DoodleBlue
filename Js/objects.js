@@ -16,12 +16,12 @@ console.log(employee)
 
 //nested object
 const student = {
-    name: "Priya",
-    age: 20,
-    address: {
-        City: "Chennai",
-        State: "Tamil Nadu"
-    }
+  name: "Priya",
+  age: 20,
+  address: {
+    City: "Chennai",
+    State: "Tamil Nadu"
+  }
 }
 console.log(student.name)
 console.log(student["age"])
@@ -29,11 +29,11 @@ console.log(student.address.City)
 
 //destructuring
 const student1 = {
-    name: "Priya",
-    age: 21,
-    course: "React"
+  name: "Priya",
+  age: 21,
+  course: "React"
 }
-const {name, age, course} = student1
+const { name, age, course } = student1
 console.log(name)
 console.log(age)
 console.log(course)
@@ -47,49 +47,49 @@ console.log(studentName)
 console.log(city)
 
 //spread operator
-const orginal={
-    name:"Neiran",
-    age:20,
+const orginal = {
+  name: "Neiran",
+  age: 20,
 }
-const updated={
-    ...orginal,
-    age:21,
-    city:"Chennai"
+const updated = {
+  ...orginal,
+  age: 21,
+  city: "Chennai"
 }
 console.log(orginal)
 console.log(updated)
 
 //spread - combine operators(merge two objects)
-const personal={
-  name:"John",
-  age:30,
+const personal = {
+  name: "John",
+  age: 30,
 }
-const professional={
-  company:"ABC Corp",
-  job:"Developer"
+const professional = {
+  company: "ABC Corp",
+  job: "Developer"
 }
-const combined={
+const combined = {
   ...personal,
   ...professional
 }
 console.log(combined)
 
 //in array
-const first=[1,2,3]
-const second=[4,5,6]
+const first = [1, 2, 3]
+const second = [4, 5, 6]
 
-const combinedArray=[...first,...second]
+const combinedArray = [...first, ...second]
 console.log(combinedArray)
 
-const copy =[...first]
+const copy = [...first]
 console.log(copy)
 
 //optional chaining - safely access nested properties(check if property exists)
-const user={
-  name:"John",
-  address:{
-    city:"New York",
-    state:"NY"
+const user = {
+  name: "John",
+  address: {
+    city: "New York",
+    state: "NY"
   }
 }
 
@@ -98,7 +98,7 @@ console.log(user.contact?.phone) // undefined
 console.log(user.company?.name) // undefined
 
 // nullish coalescing operator - default value if null or undefined
-const username= null
+const username = null
 const age1 = 0;
 const city1 = undefined
 
@@ -113,20 +113,20 @@ console.log(0 ?? 100);
 console.log(false || true);
 console.log(false ?? true);
 console.log("" ?? "Guest");
-console.log("" ||"Guest");
+console.log("" || "Guest");
 
-/*|| vs ??*/ - 
+/*|| vs ??*/ -
 
-console.log(0||100);
-console.log(0??100);
+  console.log(0 || 100);
+console.log(0 ?? 100);
 
-console.log(false||true)
-console.log(false??true)
+console.log(false || true)
+console.log(false ?? true)
 
-console.log(""??"Guest")
-console.log(""||"Guest")
+console.log("" ?? "Guest")
+console.log("" || "Guest")
 
-const a= null
-const b= undefined
-console.log(a??18)
+const a = null
+const b = undefined
+console.log(a ?? 18)
 
