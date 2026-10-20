@@ -57,7 +57,7 @@
                     <td>1</td>
                     <td>Web Development Workshop</td>
                     <td>Coding Club</td>
-                    <td>16 October 2026</td>
+                    <td><time datetime="2026-10-16">16 October 2026</time></td>
                     <td>10:00 AM - 12:00 PM</td>
                     <td>Computer Laboratory</td>
                     <td><a href="club-details.html">View Details</a></td>
@@ -67,7 +67,7 @@
                     <td>2</td>
                     <td>Arts and Crafts Exhibition</td>
                     <td>Arts & Crafts Club</td>
-                    <td>19 October 2026</td>
+                    <td><time datetime="2026-10-19">19 October 2026</time></td>
                     <td>11:00 AM - 2:00 PM</td>
                     <td>College Auditorium</td>
                     <td><a href="club-details.html">View Details</a></td>
@@ -77,7 +77,7 @@
                     <td>3</td>
                     <td>Inter-College Coding Challenge</td>
                     <td>Coding Club</td>
-                    <td>24 October 2026</td>
+                    <td><time datetime="2026-10-24">24 October 2026</time></td>
                     <td>9:00 AM - 1:00 PM</td>
                     <td>Seminar Hall</td>
                     <td><a href="club-details.html">View Details</a></td>
@@ -87,7 +87,7 @@
                     <td>4</td>
                     <td>Music and Dance Day</td>
                     <td>Cultural Club</td>
-                    <td>28 October 2026</td>
+                    <td><time datetime="2026-10-28">28 October 2026</time></td>
                     <td>2:00 PM - 5:00 PM</td>
                     <td>College Auditorium</td>
                     <td><a href="club-details.html">View Details</a></td>
@@ -97,7 +97,7 @@
                     <td>5</td>
                     <td>Campus Clean-Up Drive</td>
                     <td>Eco Club</td>
-                    <td>31 October 2026</td>
+                    <td><time datetime="2026-10-31">31 October 2026</time></td>
                     <td>8:00 AM - 10:00 AM</td>
                     <td>College Campus</td>
                     <td><a href="club-details.html">View Details</a></td>
@@ -220,6 +220,49 @@
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const eventTable = document.querySelector("table");
+        const eventRows = eventTable.querySelectorAll("tbody tr");
+        const todayDate = new Date();
+        todayDate.setHours(0, 0, 0, 0);
+        const upcomingRows = [];
+
+        const bar = document.createElement("div");
+        bar.className = "filter-bar";
+        bar.innerHTML =
+            '<input type="search" id="event-search" placeholder="Search events...">' +
+            '<select id="club-filter"><option value="">All clubs</option></select>';
+        eventTable.before(bar);
+
+        const clubs = new Set();
+        eventRows.forEach(function (row) {
+            const eventDate = new Date(row.cells[3].querySelector("time").dateTime + "T00:00:00");
+            if (eventDate >= todayDate) {
+                upcomingRows.push(row);
+                clubs.add(row.cells[2].textContent.trim());
+            } else {
+                row.hidden = true;
+            }
+        });
+        const clubSelect = document.getElementById("club-filter");
+        clubs.forEach(function (club) {
+            clubSelect.add(new Option(club, club));
+        });
+
+        function filterEvents() {
+            const text = document.getElementById("event-search").value.toLowerCase();
+            const club = clubSelect.value;
+            upcomingRows.forEach(function (row) {
+                const matchesText = row.textContent.toLowerCase().includes(text);
+                const matchesClub = club === "" || row.cells[2].textContent.trim() === club;
+                row.hidden = !(matchesText && matchesClub);
+            });
+        }
+        document.getElementById("event-search").addEventListener("input", filterEvents);
+        clubSelect.addEventListener("change", filterEvents);
+    </script>
 
 </body>
 

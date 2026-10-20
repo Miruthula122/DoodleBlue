@@ -206,6 +206,72 @@
 
     </footer>
 
+    <script src="script.js"></script>
+    <script>
+        const form = document.querySelector('form[method="post"]');
+
+        const interest = document.getElementById("interest");
+        const counter = document.createElement("span");
+        counter.className = "char-count";
+        interest.after(counter);
+
+        function updateCount() {
+            counter.textContent = interest.value.length + " / 300 characters";
+        }
+        interest.maxLength = 300;
+        interest.addEventListener("input", updateCount);
+        updateCount();
+
+        function showError(input, message) {
+            clearError(input);
+            const err = document.createElement("span");
+            err.className = "field-error";
+            err.textContent = message;
+            input.after(err);
+        }
+        function clearError(input) {
+            const next = input.nextElementSibling;
+            if (next && next.classList.contains("field-error")) next.remove();
+        }
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let valid = true;
+
+            const name = document.getElementById("fullname");
+            const phone = document.getElementById("phone");
+            const email = document.getElementById("email");
+
+            if (name.value.trim().length < 3) {
+                showError(name, "Please enter your full name (at least 3 letters).");
+                valid = false;
+            } else { clearError(name); }
+
+            if (!/^[0-9]{10}$/.test(phone.value)) {
+                showError(phone, "Phone number must be exactly 10 digits.");
+                valid = false;
+            } else { clearError(phone); }
+
+            if (!email.value.includes("@") || !email.value.includes(".")) {
+                showError(email, "Please enter a valid email address.");
+                valid = false;
+            } else { clearError(email); }
+
+            if (valid) {
+                const clubName = document.getElementById("club").selectedOptions[0].text;
+                const box = document.createElement("div");
+                box.className = "success-box";
+                box.textContent = "🎉 Thank you, " + name.value.trim() +
+                    "! Your registration for the " + clubName + " has been received.";
+                form.replaceWith(box);
+            }
+        });
+
+        form.addEventListener("reset", function () {
+            setTimeout(updateCount, 0);
+        });
+    </script>
+
 </body>
 
 </html>

@@ -214,6 +214,25 @@
 
     </footer>
 
+    <script src="script.js"></script>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 12) {
+            greeting = "Good morning! ☀️";
+        } else if (hour < 17) {
+            greeting = "Good afternoon! 🌤️";
+        } else {
+            greeting = "Good evening! 🌙";
+        }
+
+        const label = document.querySelector(".hero-label");
+        const hello = document.createElement("p");
+        hello.className = "hero-greeting";
+        hello.textContent = greeting;
+        label.before(hello);
+    </script>
+
 </body>
 
 </html>

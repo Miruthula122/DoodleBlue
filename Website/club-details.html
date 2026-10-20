@@ -201,6 +201,33 @@
             <p>&copy; 2026 Campus Clubs. All rights reserved.</p>
         </div>
 
+        <script src="script.js"></script>
+    <script>
+        const activities = [...document.querySelectorAll("article")].filter(function (a) {
+            return a.textContent.includes("Date:");
+        });
+
+        let shown = false;
+        activities.forEach(function (item) {
+            if (shown) return;
+            const dateText = item.querySelectorAll("p")[0].textContent.replace("Date:", "").trim();
+            const eventDate = new Date(dateText);   // e.g. "24 October 2026"
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const days = Math.round((eventDate - today) / (1000 * 60 * 60 * 24));
+
+            if (days >= 0) {
+                const note = document.createElement("p");
+                note.className = "js-note";
+                note.textContent = days === 0
+                    ? "🎉 \"" + item.querySelector("h3").textContent + "\" is today!"
+                    : "⏳ " + days + " day" + (days === 1 ? "" : "s") + " until \"" + item.querySelector("h3").textContent + "\"";
+                item.before(note);
+                shown = true;
+            }
+        });
+    </script>
+
 </body>
 
 </html>

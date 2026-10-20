@@ -242,6 +242,24 @@
 
     </footer>
 
+    <script src="script.js"></script>
+    <script>
+        const searchBox = document.getElementById("search");
+        const clubs = document.querySelectorAll(".club-container article");
+
+        searchBox.addEventListener("input", function () {
+            const searchText = searchBox.value.toLowerCase();
+
+            clubs.forEach(function (club) {
+                const clubName = club.querySelector("h3").textContent.toLowerCase();
+                club.style.display = clubName.includes(searchText) ? "" : "none";
+            });
+        });
+
+        document.querySelector('form[method="get"]').addEventListener("submit", function (event) {
+            event.preventDefault();
+        });
+    </script>
 
 </body>
 
