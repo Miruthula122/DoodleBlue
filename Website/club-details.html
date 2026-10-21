@@ -211,7 +211,7 @@
         activities.forEach(function (item) {
             if (shown) return;
             const dateText = item.querySelectorAll("p")[0].textContent.replace("Date:", "").trim();
-            const eventDate = new Date(dateText);   // e.g. "24 October 2026"
+            const eventDate = new Date(dateText);
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             const days = Math.round((eventDate - today) / (1000 * 60 * 60 * 24));

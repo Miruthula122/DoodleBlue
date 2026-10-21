@@ -11,11 +11,13 @@ b = 10
 //console.log(c)
 //c=10  //Temporal Dead Zone Error(TDZ Error)
 
+//Function Declaration
 greet()
 function greet() {
     console.log("Hello!!")
 }
 
+//Function Expression
 let res = () => {
     console.log("Hi")
 }
