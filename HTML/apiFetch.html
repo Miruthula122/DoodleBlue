@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="loadBtn">Load Button</button>
+    <p id="status"></p>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Brand</th>
+            </tr>
+        </thead>
+.
+        <tbody id="userTable">
+            <!-- API data will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        const loadBtn = document.getElementById("loadBtn")
+        const userTable = document.getElementById("userTable")
+        const status = document.getElementById("status")
+
+        async function fetchUsers() {
+            status.textContent = "Loading users..."
+            loadBtn.disabled = true
+            userTable.innerHTML = ""
+
+            try {
+                const response = await fetch("https://dummyjson.com/products")
+                if (!response.ok) {
+                    throw new Error("Failed to fetch Products")
+                }
+
+                const users = await response.json()
+
+                users.products.forEach((user) => {
+                    const row = document.createElement("tr")
+
+                    row.innerHTML = `
+                    <td>${user.title}</td>
+                    <td>${user.category}</td>
+                    <td>${user.price}</td>
+                    <td>${user.brand}</td>
+                    `
+
+                    userTable.appendChild(row)
+                })
+
+                status.textContent = "Products Loaded Successfully"
+            } catch (error) {
+                status.textContent = "Error: " + error.message
+            } finally {
+                loadBtn.disabled = false
+            }
+        }
+
+        loadBtn.addEventListener("click", fetchUsers)
+    </script>
+</body>
+
+</html>
