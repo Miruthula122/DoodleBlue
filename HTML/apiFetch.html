@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <button id="loadBtn">Load Button</button>
+    <h2> User Details </h2>
+    <button id="loadBtn">Load Users</button>
     <p id="status"></p>
-
-    <table border="2">
+    <table>
         <thead>
             <tr>
-                <th>Title</th>
+                <th>Product Name</th>
                 <th>Category</th>
                 <th>Price</th>
                 <th>Brand</th>
             </tr>
         </thead>
-.
         <tbody id="userTable">
-            <!-- API data will be added here -->
+            <!--API data will be added here-->
         </tbody>
     </table>
 
     <script>
-        const loadBtn = document.getElementById("loadBtn")
-        const userTable = document.getElementById("userTable")
-        const status = document.getElementById("status")
+        const loadBtn= document.getElementById("loadBtn");
+        const userTable= document.getElementById("userTable");
+        const status= document.getElementById("status");
 
-        async function fetchUsers() {
-            status.textContent = "Loading users..."
-            loadBtn.disabled = true
-            userTable.innerHTML = ""
+        function displayUsers(data){
+            userTable.innerHTML = "";
+            data.products.forEach((products)=>{
+                const row= document.createElement("tr");
 
-            try {
-                const response = await fetch("https://dummyjson.com/products")
-                if (!response.ok) {
-                    throw new Error("Failed to fetch Products")
-                }
+                row.innerHTML= `
+                <td>${products.title}</td>
+                <td>${products.category}</td>
+                <td>${products.price}</td>
+                <td>${products.brand}</td>`;
 
-                const users = await response.json()
-
-                // //Fetch data from online dataset
-
-                // users.products.forEach((user) => {
-                //     const row = document.createElement("tr")
-
-                //     row.innerHTML = `
-                //     <td>${user.title}</td>
-                //     <td>${user.category}</td>
-                //     <td>${user.price}</td>
-                //     <td>${user.brand}</td>
-                //     `
-
-                //     userTable.appendChild(row)
-                // })
-
-
-                //To store in local storage
-                localStorage.setItem("Products", JSON.stringify(users))
-
-                //To retrieve from local storage
-                displayUsers(users)
-
-                status.textContent = "Products Loaded and saved Successfully"
-            } catch (error) {
-                status.textContent = "Error: " + error.message
-            } finally {
-                loadBtn.disabled = false
-            }
-
-            function loadSavedUsers(){
-                const savedUsers = localStorage.getItem("Products")
-
-                if(savedUsers){
-                    displayUsers(JSON.parse(savedUsers))
-                    status.textContent="Products loaded from the local storage"
-                }else{
-                    status.textContent="Click Load Users to get data"
-                }
-            }
+                userTable.appendChild(row);
+            });
         }
 
-        loadBtn.addEventListener("click", fetchUsers)
+        async function fetchUsers(){
+            status.textContent= "Loading Users.....";
+            loadBtn.disabled= true;
+            userTable.innerHTML=" ";
+
+            try{
+                const response= await fetch("https://dummyjson.com/products");
+
+            if(!response.ok){
+                throw new Error("Failed to fetch users");
+            }
+            const data= await response.json();
+
+            //Store API data in Local Storage
+            localStorage.setItem("data", JSON.stringify(data));
+
+            //Display the fetched data
+            displayUsers(data);
+
+            status.textContent= "Users loaded successfully!";
+        } catch(error){
+            status.textContent= "Error: "+error.message;
+        }finally{
+            loadBtn.disabled= false;
+        }
+    }
+
+    function loadSavedUsers(){
+        const savedData= localStorage.getItem("data");
+        if(savedData){
+            displayUsers(JSON.parse(savedData));
+            status.textContent= "Users loaded from Local Storage!";
+        }
+        else{
+            status.textContent= "Click Load Users to fetch data"
+        }
+    }
+    loadBtn.addEventListener("click",fetchUsers);
     </script>
 </body>
-
 </html>
