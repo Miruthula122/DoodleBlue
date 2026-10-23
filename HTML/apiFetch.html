@@ -44,24 +44,44 @@
 
                 const users = await response.json()
 
-                users.products.forEach((user) => {
-                    const row = document.createElement("tr")
+                // //Fetch data from online dataset
 
-                    row.innerHTML = `
-                    <td>${user.title}</td>
-                    <td>${user.category}</td>
-                    <td>${user.price}</td>
-                    <td>${user.brand}</td>
-                    `
+                // users.products.forEach((user) => {
+                //     const row = document.createElement("tr")
 
-                    userTable.appendChild(row)
-                })
+                //     row.innerHTML = `
+                //     <td>${user.title}</td>
+                //     <td>${user.category}</td>
+                //     <td>${user.price}</td>
+                //     <td>${user.brand}</td>
+                //     `
 
-                status.textContent = "Products Loaded Successfully"
+                //     userTable.appendChild(row)
+                // })
+
+
+                //To store in local storage
+                localStorage.setItem("Products", JSON.stringify(users))
+
+                //To retrieve from local storage
+                displayUsers(users)
+
+                status.textContent = "Products Loaded and saved Successfully"
             } catch (error) {
                 status.textContent = "Error: " + error.message
             } finally {
                 loadBtn.disabled = false
+            }
+
+            function loadSavedUsers(){
+                const savedUsers = localStorage.getItem("Products")
+
+                if(savedUsers){
+                    displayUsers(JSON.parse(savedUsers))
+                    status.textContent="Products loaded from the local storage"
+                }else{
+                    status.textContent="Click Load Users to get data"
+                }
             }
         }
 
