@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form Controls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <form action="/preferences" method="post">
+            <h2 style="font-family: Arial, Helvetica, sans-serif;">HTML Form Controls</h2>
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="fullname" minlength="2" maxlength="60" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="passwoed">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required><br><br>
+
+            <label for="phone">Phone number:</label>
+            <input type="number" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br><br>
+
+            <label for="course">Preferred Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="frontend">Frontend Development</option>
+            </select><br><br>
+
+            <label for="bio">About You:</label><br>
+            <textarea id="bio" name="bio" rows="4" maxlength="300" placeholder="Tell us about yourself..."
+                required></textarea><br><br>
+
+            <label for="resume">Resume (pdf only):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,application/pdf" required><br><br>
+
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                    I agree to the terms and conditions
+                </label>
+            </fieldset><br><br>
+
+            <fieldset>
+                <legend>Select Your Skills</legend>
+                <label for="skill-html">
+                    <input type="checkbox" id="skill-html" name="skills" value="html">
+                    HTML
+                </label><br>
+                <label for="skill-css">
+                    <input type="checkbox" id="skill-css" name="skills" value="css">
+                    CSS
+                </label><br>
+                <label for="skill-js">
+                    <input type="checkbox" id="skill-js" name="skills" value="js">
+                    JavaScript
+                </label><br>
+                <label for="skill-frontend">
+                    <input type="checkbox" id="skill-frontend" name="skills" value="frontend">
+                    Frontend Development
+                </label>
+            </fieldset><br><br>
+
+            <fieldset>
+                <legend>Experience Level</legend>
+                <label for="level-beginner">
+                    <input type="radio" id="level-beginner" name="level" value="beginner" required>
+                    Beginner
+                </label><br>
+                <label for="level-intermediate">
+                    <input type="radio" id="level-intermediate" name="level" value="intermediate" required>
+                    Intermediate
+                </label><br>
+                <label for="level-advanced">
+                    <input type="radio" id="level-advanced" name="level" value="advanced" required>
+                    Advanced
+                </label>
+            </fieldset><br><br>
+
+            <button type="submit">Create Account</button>
+            <button type="reset">Clear Form</button>
+
+        </form>
+    </main>
+</body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2. Arrow Function Callback</h1>
+    <p> An arrow function can be used as the vent callback.</p>
+    <button id="helloBtn">Say hello</button>
+    <p id="result" class="result"></p>
+    <script>
+        const button= document.querySelector("#helloBtn");
+        const result= document.querySelector("#result");
+        button.addEventListener("click", () =>{
+            result.textContent="Hello, Students!"
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <!---->
+        <!-- here instead of id you can also directly use onclick="showMessage()"
+        <button onclick="showMessage()">Click Me</button>
+        <script>
+            function showMessage() {
+                alert("Hello!");
+            }
+            function showMessage() {
+                alert("welcome to java script");
+            }
+
+             // last one will be executed because it is overwritten
+
+            const button = document.getElementById("myButton");
+            button.onclick = showMessage;
+        </script>
+        -->
+        
+        <!-- can also use class, tag instead of id -->
+        <button id="myButton">Click Me</button>
+        <script>
+            function showMessage() {
+                alert("Hello!");
+            }
+            function showWelcome() {
+                alert("welcome");
+            }
+
+            // last one will be executed because it is overwritten
+
+            const button = document.getElementById("myButton");
+            button.onclick = showMessage;
+            button.onclick = showWelcome;
+
+            // last one will be executed because it is overwritten
+        </script>
+    </body>
+</html>
+
