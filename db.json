@@ -1,0 +1,587 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Abigail Rivera",
+      "email": "abigail.rivera@dummyjson.com",
+      "phone": "9841234567",
+      "city": "Mumbai",
+      "department": "Computer Science",
+      "year": 2,
+      "cgpa": 9.2
+    },
+    {
+      "id": "2",
+      "name": "Addison Wright",
+      "email": "addison.wright@dummyjson.com",
+      "phone": "9842469134",
+      "city": "Pune",
+      "department": "Mechanical Engineering",
+      "year": 3,
+      "cgpa": 8.7
+    },
+    {
+      "id": "3",
+      "name": "Alexander Jones",
+      "email": "alexander.jones@dummyjson.com",
+      "phone": "9843703701",
+      "city": "Delhi",
+      "department": "Information Technology",
+      "year": 2,
+      "cgpa": 8.5
+    },
+    {
+      "id": "4",
+      "name": "Ava Taylor",
+      "email": "ava.taylor@dummyjson.com",
+      "phone": "9844938268",
+      "city": "Bengaluru",
+      "department": "Business Administration",
+      "year": 1,
+      "cgpa": 8.9
+    },
+    {
+      "id": "5",
+      "name": "Avery Perez",
+      "email": "avery.perez@dummyjson.com",
+      "phone": "9846172835",
+      "city": "Hyderabad",
+      "department": "Computer Science",
+      "year": 3,
+      "cgpa": 8.8
+    },
+    {
+      "id": "6",
+      "name": "Charlotte Lopez",
+      "email": "charlotte.lopez@dummyjson.com",
+      "phone": "9847407402",
+      "city": "Chennai",
+      "department": "Economics",
+      "year": 4,
+      "cgpa": 8.6
+    },
+    {
+      "id": "7",
+      "name": "Chloe Morales",
+      "email": "chloe.morales@dummyjson.com",
+      "phone": "9848641969",
+      "city": "Mumbai",
+      "department": "Electrical Engineering",
+      "year": 2,
+      "cgpa": 8.3
+    },
+    {
+      "id": "8",
+      "name": "Daniel Cook",
+      "email": "daniel.cook@dummyjson.com",
+      "phone": "9849876536",
+      "city": "Pune",
+      "department": "Mechanical Engineering",
+      "year": 2,
+      "cgpa": 8.4
+    },
+    {
+      "id": "9",
+      "name": "Elijah Stewart",
+      "email": "elijah.stewart@dummyjson.com",
+      "phone": "9841111104",
+      "city": "Delhi",
+      "department": "Civil Engineering",
+      "year": 4,
+      "cgpa": 8.1
+    },
+    {
+      "id": "10",
+      "name": "Emily Carter",
+      "email": "emily.carter@dummyjson.com",
+      "phone": "9842345671",
+      "city": "Bengaluru",
+      "department": "Civil Engineering",
+      "year": 3,
+      "cgpa": 6.9
+    },
+    {
+      "id": "11",
+      "name": "Ethan Brooks",
+      "email": "ethan.brooks@dummyjson.com",
+      "phone": "9843580238",
+      "city": "Hyderabad",
+      "department": "Mechanical Engineering",
+      "year": 4,
+      "cgpa": 6.8
+    },
+    {
+      "id": "12",
+      "name": "Grace Bennett",
+      "email": "grace.bennett@dummyjson.com",
+      "phone": "9844814805",
+      "city": "Chennai",
+      "department": "Economics",
+      "year": 1,
+      "cgpa": 6.7
+    },
+    {
+      "id": "13",
+      "name": "Henry Foster",
+      "email": "henry.foster@dummyjson.com",
+      "phone": "9846049372",
+      "city": "Mumbai",
+      "department": "Biotechnology",
+      "year": 2,
+      "cgpa": 6.6
+    },
+    {
+      "id": "14",
+      "name": "Isabella Reed",
+      "email": "isabella.reed@dummyjson.com",
+      "phone": "9847283939",
+      "city": "Pune",
+      "department": "Information Technology",
+      "year": 3,
+      "cgpa": 6.5
+    },
+    {
+      "id": "15",
+      "name": "Jack Murphy",
+      "email": "jack.murphy@dummyjson.com",
+      "phone": "9848518506",
+      "city": "Delhi",
+      "department": "Electrical Engineering",
+      "year": 4,
+      "cgpa": 6.4
+    },
+    {
+      "id": "16",
+      "name": "Liam Howard",
+      "email": "liam.howard@dummyjson.com",
+      "phone": "9849753073",
+      "city": "Bengaluru",
+      "department": "Computer Science",
+      "year": 1,
+      "cgpa": 6.3
+    },
+    {
+      "id": "17",
+      "name": "Lily Sanders",
+      "email": "lily.sanders@dummyjson.com",
+      "phone": "9840987641",
+      "city": "Hyderabad",
+      "department": "Business Administration",
+      "year": 2,
+      "cgpa": 6.2
+    },
+    {
+      "id": "18",
+      "name": "Logan Price",
+      "email": "logan.price@dummyjson.com",
+      "phone": "9842222208",
+      "city": "Chennai",
+      "department": "Civil Engineering",
+      "year": 3,
+      "cgpa": 6.1
+    },
+    {
+      "id": "19",
+      "name": "Mason Hughes",
+      "email": "mason.hughes@dummyjson.com",
+      "phone": "9843456775",
+      "city": "Mumbai",
+      "department": "Mechanical Engineering",
+      "year": 4,
+      "cgpa": 6
+    },
+    {
+      "id": "20",
+      "name": "Mia Coleman",
+      "email": "mia.coleman@dummyjson.com",
+      "phone": "9844691342",
+      "city": "Pune",
+      "department": "Economics",
+      "year": 1,
+      "cgpa": 7.8
+    },
+    {
+      "id": "21",
+      "name": "Noah Ward",
+      "email": "noah.ward@dummyjson.com",
+      "phone": "9845925909",
+      "city": "Delhi",
+      "department": "Biotechnology",
+      "year": 2,
+      "cgpa": 7.7
+    },
+    {
+      "id": "22",
+      "name": "Olivia Parker",
+      "email": "olivia.parker@dummyjson.com",
+      "phone": "9847160476",
+      "city": "Bengaluru",
+      "department": "Information Technology",
+      "year": 3,
+      "cgpa": 7.6
+    },
+    {
+      "id": "23",
+      "name": "Owen Bailey",
+      "email": "owen.bailey@dummyjson.com",
+      "phone": "9848395043",
+      "city": "Hyderabad",
+      "department": "Electrical Engineering",
+      "year": 4,
+      "cgpa": 7.5
+    },
+    {
+      "id": "24",
+      "name": "Penelope Gray",
+      "email": "penelope.gray@dummyjson.com",
+      "phone": "9849629610",
+      "city": "Chennai",
+      "department": "Computer Science",
+      "year": 1,
+      "cgpa": 7.4
+    },
+    {
+      "id": "25",
+      "name": "Riley Cooper",
+      "email": "riley.cooper@dummyjson.com",
+      "phone": "9840864178",
+      "city": "Mumbai",
+      "department": "Business Administration",
+      "year": 2,
+      "cgpa": 7.3
+    },
+    {
+      "id": "26",
+      "name": "Samuel Kelly",
+      "email": "samuel.kelly@dummyjson.com",
+      "phone": "9842098745",
+      "city": "Pune",
+      "department": "Civil Engineering",
+      "year": 3,
+      "cgpa": 7.2
+    },
+    {
+      "id": "27",
+      "name": "Sofia Torres",
+      "email": "sofia.torres@dummyjson.com",
+      "phone": "9843333312",
+      "city": "Delhi",
+      "department": "Mechanical Engineering",
+      "year": 4,
+      "cgpa": 7.1
+    },
+    {
+      "id": "28",
+      "name": "Sophia Rogers",
+      "email": "sophia.rogers@dummyjson.com",
+      "phone": "9844567879",
+      "city": "Bengaluru",
+      "department": "Economics",
+      "year": 1,
+      "cgpa": 7
+    },
+    {
+      "id": "29",
+      "name": "Wyatt James",
+      "email": "wyatt.james@dummyjson.com",
+      "phone": "9845802446",
+      "city": "Hyderabad",
+      "department": "Biotechnology",
+      "year": 2,
+      "cgpa": 6.9
+    },
+    {
+      "id": "30",
+      "name": "Zoe Patterson",
+      "email": "zoe.patterson@dummyjson.com",
+      "phone": "9847037013",
+      "city": "Chennai",
+      "department": "Information Technology",
+      "year": 3,
+      "cgpa": 6.8
+    },
+    {
+      "name": "Karthika P",
+      "email": "karthikap@gmail.com",
+      "phone": "1234567890",
+      "department": "Civil Engineering",
+      "year": 3,
+      "cgpa": 9,
+      "city": "Chennai",
+      "id": "mkn-cQU2ZN4"
+    },
+    {
+      "name": "Miruthula S B",
+      "email": "miruthula122@gmail.com",
+      "phone": "7010632732",
+      "department": "Computer Science",
+      "year": 4,
+      "cgpa": 9.5,
+      "city": "Chennai",
+      "id": "kG21erj9WNk"
+    },
+    {
+      "name": "Deepika D",
+      "email": "deepikada@gmail.com",
+      "phone": "8567891230",
+      "department": "Computer Science",
+      "year": 4,
+      "cgpa": 10,
+      "city": "Chennai",
+      "id": "aLLIkC7puCc"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "name": "Avery Morgan",
+      "email": "avery.morgan@example.edu",
+      "department": "Computer Science",
+      "subject": "Data Structures",
+      "year": 1,
+      "students": 12,
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Samira Patel",
+      "email": "samira.patel@example.edu",
+      "department": "Mathematics",
+      "subject": "Calculus",
+      "year": 2,
+      "students": 10,
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "name": "Noah Williams",
+      "email": "noah.williams@example.edu",
+      "department": "Computer Science",
+      "subject": "Networks",
+      "year": 3,
+      "students": 8,
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Alexander Jones",
+      "email": "alex.jones@example.edu",
+      "department": "Information Technology",
+      "subject": "Web Development",
+      "year": 2,
+      "students": 15,
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "name": "Charlotte Lopez",
+      "email": "charlotte.lopez@example.edu",
+      "department": "Economics",
+      "subject": "Microeconomics",
+      "year": 4,
+      "students": 9,
+      "status": "Active"
+    },
+    {
+      "id": "6",
+      "name": "Daniel Cook",
+      "email": "daniel.cook@example.edu",
+      "department": "Mechanical Engineering",
+      "subject": "Thermodynamics",
+      "year": 2,
+      "students": 11,
+      "status": "Active"
+    },
+    {
+      "id": "7",
+      "name": "Emma Miller",
+      "email": "emma.miller@example.edu",
+      "department": "Physics",
+      "subject": "Quantum Mechanics",
+      "year": 3,
+      "students": 7,
+      "status": "Inactive"
+    },
+    {
+      "id": "8",
+      "name": "Ethan Martinez",
+      "email": "ethan.martinez@example.edu",
+      "department": "Chemistry",
+      "subject": "Organic Chemistry",
+      "year": 2,
+      "students": 13,
+      "status": "Active"
+    },
+    {
+      "id": "9",
+      "name": "Julia Scott",
+      "email": "julia.scott@example.edu",
+      "department": "Biology",
+      "subject": "Genetics",
+      "year": 3,
+      "students": 6,
+      "status": "Active"
+    },
+    {
+      "id": "10",
+      "name": "Liam Brown",
+      "email": "liam.brown@example.edu",
+      "department": "Computer Science",
+      "subject": "Algorithms",
+      "year": 4,
+      "students": 14,
+      "status": "Active"
+    },
+    {
+      "id": "11",
+      "name": "Henry Adams",
+      "email": "henry.adams@example.edu",
+      "department": "Mathematics",
+      "subject": "Linear Algebra",
+      "year": 1,
+      "students": 9,
+      "status": "Active"
+    },
+    {
+      "id": "12",
+      "name": "Grace Nelson",
+      "email": "grace.nelson@example.edu",
+      "department": "Physics",
+      "subject": "Electromagnetism",
+      "year": 2,
+      "students": 10,
+      "status": "Active"
+    },
+    {
+      "id": "13",
+      "name": "Oliver Hayes",
+      "email": "oliver.hayes@example.edu",
+      "department": "Chemistry",
+      "subject": "Physical Chemistry",
+      "year": 3,
+      "students": 8,
+      "status": "Active"
+    },
+    {
+      "id": "14",
+      "name": "Priya Raman",
+      "email": "priya.raman@example.edu",
+      "department": "Information Technology",
+      "subject": "Database Systems",
+      "year": 3,
+      "students": 12,
+      "status": "Active"
+    },
+    {
+      "id": "15",
+      "name": "Lucas Bennett",
+      "email": "lucas.bennett@example.edu",
+      "department": "Economics",
+      "subject": "Macroeconomics",
+      "year": 2,
+      "students": 11,
+      "status": "Inactive"
+    },
+    {
+      "id": "16",
+      "name": "Hannah Clarke",
+      "email": "hannah.clarke@example.edu",
+      "department": "Biology",
+      "subject": "Microbiology",
+      "year": 4,
+      "students": 7,
+      "status": "Active"
+    },
+    {
+      "id": "17",
+      "name": "Rohan Mehta",
+      "email": "rohan.mehta@example.edu",
+      "department": "Mechanical Engineering",
+      "subject": "Fluid Mechanics",
+      "year": 3,
+      "students": 13,
+      "status": "Active"
+    },
+    {
+      "id": "18",
+      "name": "Isla Fraser",
+      "email": "isla.fraser@example.edu",
+      "department": "Computer Science",
+      "subject": "Operating Systems",
+      "year": 3,
+      "students": 15,
+      "status": "Active"
+    },
+    {
+      "id": "19",
+      "name": "Marcus Reid",
+      "email": "marcus.reid@example.edu",
+      "department": "Mathematics",
+      "subject": "Discrete Mathematics",
+      "year": 1,
+      "students": 14,
+      "status": "Active"
+    },
+    {
+      "id": "20",
+      "name": "Naomi Brooks",
+      "email": "naomi.brooks@example.edu",
+      "department": "Physics",
+      "subject": "Optics",
+      "year": 2,
+      "students": 6,
+      "status": "Inactive"
+    },
+    {
+      "id": "21",
+      "name": "Tobias Keane",
+      "email": "tobias.keane@example.edu",
+      "department": "Chemistry",
+      "subject": "Inorganic Chemistry",
+      "year": 1,
+      "students": 10,
+      "status": "Active"
+    },
+    {
+      "id": "22",
+      "name": "Anika Sharma",
+      "email": "anika.sharma@example.edu",
+      "department": "Biology",
+      "subject": "Cell Biology",
+      "year": 2,
+      "students": 9,
+      "status": "Active"
+    },
+    {
+      "id": "23",
+      "name": "Felix Gordon",
+      "email": "felix.gordon@example.edu",
+      "department": "Information Technology",
+      "subject": "Cyber Security",
+      "year": 4,
+      "students": 12,
+      "status": "Active"
+    },
+    {
+      "id": "24",
+      "name": "Zara Hussain",
+      "email": "zara.hussain@example.edu",
+      "department": "Economics",
+      "subject": "Econometrics",
+      "year": 4,
+      "students": 8,
+      "status": "Active"
+    },
+    {
+      "id": "25",
+      "name": "Victor Lang",
+      "email": "victor.lang@example.edu",
+      "department": "Mechanical Engineering",
+      "subject": "Machine Design",
+      "year": 4,
+      "students": 11,
+      "status": "Active"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
